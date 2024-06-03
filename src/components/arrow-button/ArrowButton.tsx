@@ -7,7 +7,7 @@ export type OnClick = () => void;
 
 export const ArrowButton = () => {
 	return (
-		/* Не забываем указаывать role и aria-label атрибуты для интерактивных элементов */
+		/* Не забываем указаывать role и aria-label атрибуты для интерактивных элементов  */
 		<div
 			role='button'
 			aria-label='Открыть/Закрыть форму параметров статьи'
