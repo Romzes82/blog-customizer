@@ -5,13 +5,16 @@ import styles from './ArrowButton.module.scss';
 import clsx from 'clsx';
 
 /** Функция для обработки открытия/закрытия формы */
-// export type OnClick = () => void;
+export type OnClick = () => void;
+
 export type ArrowButtonProps = {
 	isActive: boolean;
-	onClick: () => void;
+	onClick: OnClick;
 };
 
-export const ArrowButton = ({ isActive, onClick }: ArrowButtonProps) => {
+export const ArrowButton = (props: ArrowButtonProps) => {
+	const { isActive, onClick } = props;
+
 	return (
 		/* Не забываем указаывать role и aria-label атрибуты для интерактивных элементов  */
 		<div
