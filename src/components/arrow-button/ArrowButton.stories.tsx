@@ -13,7 +13,10 @@ export const ArrowButtonStory: Story = {
 	render: () => {
 		return (
 			<>
-				<ArrowButton />
+				<ArrowButton
+					isActive={false}
+					onClick={() => alert('Клик на кнопке со стрелкой')}
+				/>
 			</>
 		);
 	},
