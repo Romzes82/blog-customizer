@@ -61,7 +61,12 @@ export const ArticleParamsForm = (props: ArticleParamsFormProps) => {
 	useEffect(() => {
 		if (!isOpen) return;
 		const handleOutsideClick = (event: MouseEvent) => {
-			if (formRef.current && !formRef.current.contains(event.target as Node)) {
+			// console.log(formRef?.current?.contains(event.target as Node));
+
+			if (
+				formRef.current &&
+				!formRef?.current?.contains(event.target as Node)
+			) {
 				toggleShowForm();
 			}
 		};
